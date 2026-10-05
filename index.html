@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Advanced Todo Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>TaskFlow</h1>
+                <p>Advanced Todo Management</p>
+            </div>
+
+            <button id="themeBtn" class="theme-btn">
+                🌙
+            </button>
+
+        </header>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Total</span>
+                <strong id="totalTasks">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Active</span>
+                <strong id="activeTasks">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Completed</span>
+                <strong id="completedTasks">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>High Priority</span>
+                <strong id="highTasks">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Progress -->
+        <section class="progress-section">
+
+            <div class="progress-header">
+                <span>Overall Progress</span>
+                <span id="progressText">0%</span>
+            </div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+        </section>
+
+
+        <!-- Add Task -->
+        <section class="add-task">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done?"
+            >
+
+            <select id="priorityInput">
+
+                <option value="low">
+                    Low Priority
+                </option>
+
+                <option value="medium" selected>
+                    Medium Priority
+                </option>
+
+                <option value="high">
+                    High Priority
+                </option>
+
+            </select>
+
+            <input
+                type="date"
+                id="dateInput"
+            >
+
+            <button id="addBtn">
+                + Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Search & Controls -->
+        <section class="controls">
+
+            <div class="search-box">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search tasks..."
+                >
+
+            </div>
+
+
+            <select id="sortSelect">
+
+                <option value="newest">
+                    Newest First
+                </option>
+
+                <option value="oldest">
+                    Oldest First
+                </option>
+
+                <option value="priority">
+                    Priority
+                </option>
+
+                <option value="dueDate">
+                    Due Date
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- Filters -->
+        <section class="filters">
+
+            <button
+                class="filter-btn active"
+                data-filter="all">
+
+                All
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="active">
+
+                Active
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="completed">
+
+                Completed
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="high">
+
+                High Priority
+
+            </button>
+
+        </section>
+
+
+        <!-- Task List -->
+        <main>
+
+            <ul id="taskList"></ul>
+
+            <div
+                id="emptyState"
+                class="empty-state">
+
+                <div class="empty-icon">
+                    📋
+                </div>
+
+                <h2>No tasks found</h2>
+
+                <p>
+                    Add a task to get started.
+                </p>
+
+            </div>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <span id="taskCounter">
+                0 tasks
+            </span>
+
+            <button id="clearCompleted">
+                Clear Completed
+            </button>
+
+            <button id="clearAll">
+                Clear All
+            </button>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
